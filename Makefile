@@ -13,6 +13,10 @@ all:
 test:
 	$(MAKE) -C $(BUILD_DIR)/ test
 
+.PHONY: man
+man:
+	$(MAKE) -C doc/
+
 .PHONY: clean
 clean:
 	@echo Cleaning out $(BUILD_DIR)/
