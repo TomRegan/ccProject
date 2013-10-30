@@ -21,3 +21,4 @@ man:
 clean:
 	@echo Cleaning out $(BUILD_DIR)/
 	@$(RM) -rf $(BUILD_DIR)/*
+	@$(MAKE) -C doc/ clean

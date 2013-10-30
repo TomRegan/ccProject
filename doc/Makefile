@@ -10,4 +10,5 @@ check :
 
 .PHONY: clean
 clean:
-	$(RM) $(OUTPUT)
+	@echo "Cleaning out doc/"
+	@$(RM) $(OUTPUT)
