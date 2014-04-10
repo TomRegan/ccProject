@@ -1,12 +1,12 @@
 #include <iostream>
 #include "gtest/gtest.h"
 
-#include "helloworld.h"
+#include "{{APP_LC}}.h"
 
-class HelloWorldTest : public ::testing::Test {
+class {{APP}}Test : public ::testing::Test {
 
  protected:
-  helloworld::HelloWorld helloWorld;
+  {{APP_NS}}{{APP}} {{APP_IL}};
 
   virtual void SetUp() {
 
@@ -18,7 +18,7 @@ class HelloWorldTest : public ::testing::Test {
 
 };
 
-TEST_F(HelloWorldTest, ShouldReturnHelloWorld) {
+TEST_F({{APP}}Test, ShouldReturn{{APP}}) {
 
-  ASSERT_STREQ("Hello, World!", helloWorld.toString().c_str());
+  ASSERT_STREQ("{{APP}}", {{APP_IL}}.to_str().c_str());
 }

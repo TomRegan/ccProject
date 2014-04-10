@@ -1,7 +1,10 @@
 #include <iostream>
-#include "helloworld.h"
+#include "{{APP_LC}}.h"
 
-int main() {
-  helloworld::HelloWorld helloWorld;
-  std::cout << helloWorld.toString() << std::endl;
+int
+main()
+{
+  auto {{APP_IL}} = {{APP_NS}}{{APP}}();
+  std::cout << {{APP_IL}}.to_str() << std::endl;
+  return 0;
 }

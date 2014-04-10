@@ -1,18 +1,17 @@
-#ifndef HELLOWORLD_H_
-#define HELLOWORLD_H_
+#ifndef {{APP_UC}}_H_
+#define {{APP_UC}}_H_
 
-#include <iostream>
 #include <string>
-
-namespace helloworld {
-
-class HelloWorld {
+{{IS_SET APP_NS}}
+namespace {{APP_LC}} {
+{{END_IS_SET}}
+class {{APP}} {
 
  public:
-  std::string toString();
+  std::string to_str() const;
 
 };
-
-}
-
-#endif /* HELLOWORLD_H_ */
+{{IS_SET APP_NS}}
+}  // {{APP_LC}}
+{{END_IS_SET}}
+#endif  // {{APP_UC}}_H_

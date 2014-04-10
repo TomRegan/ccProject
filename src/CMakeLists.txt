@@ -4,7 +4,7 @@
 set(SOURCE_FILES
   helloworld.cc
 )
-set(CMAKE_CXX_FLAGS "-g -Wall")
+set(CMAKE_CXX_FLAGS "-g -Wall -std=c++11")
 add_library(helloworld_lib ${SOURCE_FILES})
 add_executable(helloworld main.cc)
 target_link_libraries(helloworld helloworld_lib)
