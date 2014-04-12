@@ -2,19 +2,19 @@
 # Binaries and Libraries
 ################################
 set(SOURCE_FILES
-  helloworld.cc
+  application.cc
 )
 set(CMAKE_CXX_FLAGS "-g -Wall -std=c++11")
-add_library(helloworld_lib ${SOURCE_FILES})
-add_executable(helloworld main.cc)
-target_link_libraries(helloworld helloworld_lib)
+add_library(application_lib ${SOURCE_FILES})
+add_executable(application main.cc)
+target_link_libraries(application application_lib)
 
 ################################
 # Tests
 ################################
 set(TEST_FILES
-  test_helloworld.cc
+  test_application.cc
 )
 add_executable(TestSuite ${TEST_FILES})
 target_link_libraries(TestSuite gtest gtest_main)
-target_link_libraries(TestSuite helloworld_lib)
+target_link_libraries(TestSuite application_lib)

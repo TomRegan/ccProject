@@ -4,6 +4,7 @@
 # project root.
 
 BUILD_DIR := build
+DOCS_DIR := doc
 
 .PHONY: all
 all:
@@ -15,10 +16,18 @@ test:
 
 .PHONY: man
 man:
-	$(MAKE) -C doc/
+	$(MAKE) -C $(DOCS_DIR)/
 
 .PHONY: clean
 clean:
 	@echo Cleaning out $(BUILD_DIR)/
 	@$(RM) -rf $(BUILD_DIR)/*
-	@$(MAKE) -C doc/ clean
+	@$(MAKE) -C $(DOCS_DIR)/ clean
+
+.PHONY: targets
+targets:
+	@echo "Makefile provides the following targets:\n"
+	@echo "\tall\t\tbuild the application"
+	@echo "\ttest\t\trun unit tests"
+	@echo "\tman\t\tbuild the documentation"
+	@echo "\tclean\t\tremove files in $(BUILD_DIR) and $(DOCS_DIR)\n"

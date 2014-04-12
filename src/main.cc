@@ -1,10 +1,10 @@
 #include <iostream>
-#include "{{APP_LC}}.h"
+#include "application.h"
 
 int
 main()
 {
-  auto {{APP_IL}} = {{APP_NS}}{{APP}}();
-  std::cout << {{APP_IL}}.to_str() << std::endl;
+  auto application = application::Application();
+  std::cout << application.to_str() << std::endl;
   return 0;
 }
