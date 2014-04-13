@@ -5,14 +5,15 @@
 
 BUILD_DIR := build
 DOCS_DIR := doc
+EXEC_DIR := $(BUILD_DIR)/src
 
 .PHONY: all
 all:
 	$(MAKE) -C $(BUILD_DIR)/
 
 .PHONY: test
-test:
-	$(MAKE) -C $(BUILD_DIR)/ test
+test: all
+	$(EXEC_DIR)/TestSuite
 
 .PHONY: man
 man:
@@ -20,6 +21,10 @@ man:
 
 .PHONY: clean
 clean:
+	@$(MAKE) -C $(BUILD_DIR) clean
+
+.PHONY: distclean
+distclean:
 	@echo Cleaning out $(BUILD_DIR)/
 	@$(RM) -rf $(BUILD_DIR)/*
 	@$(MAKE) -C $(DOCS_DIR)/ clean
@@ -27,7 +32,8 @@ clean:
 .PHONY: targets
 targets:
 	@echo "Makefile provides the following targets:\n"
-	@echo "\tall\t\tbuild the application"
+	@echo "\tall\tbuild the application (default)"
 	@echo "\ttest\t\trun unit tests"
 	@echo "\tman\t\tbuild the documentation"
-	@echo "\tclean\t\tremove files in $(BUILD_DIR) and $(DOCS_DIR)\n"
+	@echo "\tclean\t\tremove compiled files"
+	@echo "\tdistclean\tremove files in $(BUILD_DIR) and $(DOCS_DIR)\n"
