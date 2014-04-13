@@ -5,8 +5,8 @@ set(SOURCE_FILES
   application.cc
 )
 set(CMAKE_CXX_FLAGS "-g -Wall -std=c++11")
-add_library(application_lib ${SOURCE_FILES})
 add_executable(application main.cc)
+add_library(application_lib ${SOURCE_FILES})
 target_link_libraries(application application_lib)
 
 ################################
