@@ -17,7 +17,7 @@
 
 namespace application {
 
-int Application::main() {
+int Application::main(int argc, char *argv[]) {
   return 0;
 }
 

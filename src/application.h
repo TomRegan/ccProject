@@ -23,7 +23,7 @@ namespace application {
 class Application {
 
  public:
-  int main();
+  int main(int argc, char *argv[]);
   std::string to_str() const;
 
 };

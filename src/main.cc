@@ -16,8 +16,8 @@
 #include "application.h"
 
 int
-main()
+main(int argc, char *argv[])
 {
   auto app = application::Application();
-  return app.main();
+  return app.main(argc, argv);
 }

@@ -37,5 +37,5 @@ TEST_F(ApplicationTest, ShouldReturnApplication) {
 }
 
 TEST_F(ApplicationTest, ShouldReturnZeroOnSuccess) {
-  ASSERT_EQ(0, application.main());
+  ASSERT_EQ(0, application.main(0, NULL));
 }
