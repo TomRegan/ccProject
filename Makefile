@@ -32,7 +32,7 @@ distclean:
 .PHONY: targets
 targets:
 	@echo "Makefile provides the following targets:\n"
-	@echo "\tall\tbuild the application (default)"
+	@echo "\tall\t\tbuild the application (default)"
 	@echo "\ttest\t\trun unit tests"
 	@echo "\tman\t\tbuild the documentation"
 	@echo "\tclean\t\tremove compiled files"
